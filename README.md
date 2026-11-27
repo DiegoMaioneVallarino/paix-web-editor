@@ -7,9 +7,13 @@ npm run dev
 `npm run build` comprueba TypeScript, genera dist y actualiza el HTML autónomo.
 
 ## Editor visual
-La barra superior reúne selección, filas, columnas, cortes, cuadrícula, cortes centrados, margen interior y capas. El último botón abre el panel del proyecto. El lienzo oscuro muestra la composición actual y las divisiones pendientes aparecen en violeta. En una cuadrícula puedes ajustar columnas y filas por separado.
+La barra superior reúne selección, filas, columnas, cortes, cuadrícula, cortes centrados, margen interior y capas. El último botón selecciona el wireframe completo y muestra sus ejes editables. Arrastra un separador para cambiar las dos pistas contiguas. Los cortes centrados conservan su simetría. En un margen interior puedes arrastrar cada borde. Deshacer revierte el gesto completo. El lienzo claro muestra la composición actual y las divisiones pendientes aparecen en violeta. En una cuadrícula puedes ajustar columnas y filas por separado.
 
-Usa los botones de móvil y escritorio para cambiar las dimensiones. Arrastra la pestaña derecha, la inferior o la esquina para ajustar el dispositivo. Con el foco en una pestaña, las flechas ajustan un píxel y Mayús + flecha ajusta diez. Abre el panel inferior para recorrer el árbol de izquierda a derecha, crear, guardar, rotar o escribir un tamaño exacto. La barra izquierda abre la jerarquía, el código y Smart Colors. La pestaña Capas Z del lateral derecho enumera las capas superpuestas por grupo. Selecciona una para editarla en el lienzo. La paleta modifica la vista del editor durante la sesión. El archivo .paix y la exportación React describen la estructura.
+Usa los botones de móvil y escritorio para cambiar las dimensiones. Arrastra la pestaña derecha, la inferior o la esquina para ajustar el dispositivo. Con el foco en una pestaña, las flechas ajustan un píxel y Mayús + flecha ajusta diez. Abre el panel inferior para recorrer el árbol de izquierda a derecha, crear, guardar, rotar o escribir un tamaño exacto. La barra izquierda abre Componentes, Jerarquía, Nodos de acción y Estilos. En la barra inferior puedes abrir el código .paix, arrastrar los knobs de ancho y alto o pulsar su lectura en píxeles para escribir un valor exacto. La pestaña Capas Z del lateral derecho enumera las capas superpuestas por grupo. Selecciona una para editarla en el lienzo. El lateral derecho también ofrece estilos predefinidos para el área seleccionada. En Estilos, pulsa Editar color de fondo para abrir Smart Colors y Aplicar color para confirmar. El archivo .paix guarda las asignaciones de componentes, colores y conexiones de doble clic en comentarios del editor. La exportación React incluye la estructura, los fondos y las etiquetas de componentes.
+
+El árbol ilumina el área correspondiente al pasar el puntero por un nodo. Arrastra con el botón derecho en el árbol o en el lienzo para desplazar esa cámara independientemente. El interruptor de dispositivo indica el perfil activo aunque ajustes sus dimensiones.
+
+En Margen interior, el modo automático sigue los dos bordes más cercanos al puntero. Horizontal y Vertical ajustan un par simétrico. Seleccionar un lado permite moverlo por separado. Haz clic para fijar la vista previa o escribe los cuatro valores. La instrucción `island` admite una medida uniforme, dos (vertical y horizontal) o cuatro (arriba, derecha, abajo e izquierda). Ejemplo: `main slice island 8% 12% 5% 20% > "interior"`.
 
 ## Gestos
 1. Activa Corte vertical y haz clic en main. Mueve el puntero sin mantener el botón presionado. Otro clic congela la división. Elige px, Izquierda y escribe 240.
@@ -29,4 +33,3 @@ contenido slice rows 3 > "cabecera" "articulo" "pie"
 ```
 
 Los PNG de las herramientas proceden de la carpeta neowebcore del prototipo. El guardado en archivo incluye el wireframe confirmado. El zoom del navegador, la selección, el historial y las dimensiones del dispositivo pertenecen a la sesión de edición. La última fuente confirmada se almacena localmente si el navegador lo permite.
-"# paix-web-editor" 
